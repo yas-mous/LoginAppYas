@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 public class Worker {
     @Id
     private String hostname;
+    private String service;//sc sh
 
     public Worker() {
     }
@@ -18,5 +19,10 @@ public class Worker {
     }
     public void setHostname(String hostname) {
         this.hostname = hostname;
+    }
+
+    @Override
+    public String handleRequest(String name) {
+        return "Hello " + name + ", I am " + id;
     }
 }
